@@ -1,8 +1,13 @@
 {
-  "pages": ["pages/index/index", "pages/logs/logs"],
+  "pages": [
+    "pages/line/index",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar",
     "t-icon": "/miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "ec-canvas": "/ec-canvas/ec-canvas",
     "t-loading": "/miniprogram_npm/tdesign-miniprogram/loading/loading"
   },
   "window": {
