@@ -1,13 +1,12 @@
 {
   "name": "weixin-pages-morjs",
   "version": "1.0.0",
-  "description": "by zy",
+  "description": "weixin-pages-morjs test by zy",
   "scripts": {
     "dev": "mor compile --watch",
     "compile": "mor compile --production",
     "dev:web": "mor compile --name web -w",
     "compile:web": "mor compile --name web --production"
-    
   },
   "keywords": [],
   "author": "yongzheng <yongzheng@trip.com>",
@@ -17,7 +16,8 @@
   },
   "license": "",
   "dependencies": {
-    "@morjs/core": "*"
+    "@morjs/core": "*",
+    "tdesign-miniprogram": "^1.2.9"
   },
   "devDependencies": {
     "@morjs/cli": "*"
