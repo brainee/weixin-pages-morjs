@@ -106,12 +106,42 @@ Component({
         }
       }
     },
-
+    getCanvasAndCtx(){
+      //ref https://developer.mozilla.org/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM
+      let myCanvas = document.querySelector("."+this.data.canvasId)?.shadowRoot?.querySelector("canvas");
+      if(myCanvas){
+        ctx=myCanvas.getContext("2d");
+        console.log("[zy]getCanvasAndCtx if",ctx,ctx.canvas);
+      }else{
+        console.log("[zy]getCanvasAndCtx else");
+        myCanvas=document.createElement("canvas"); 
+        myCanvas.canvasId = this.data.canvasId;
+        myCanvas.zy="createElement";
+        myCanvas.className="ec-canvas";
+        document.body.appendChild(myCanvas);  
+        ctx=myCanvas.getContext("2d");
+        // ctx.canvas=myCanvas;
+      }
+      if(!ctx.canvas){
+        console.log("[zy]getCanvasAndCtx ctx.canvas is null");
+        ctx.canvas=myCanvas;
+      }
+      return {ctx,canvas:myCanvas};
+    }, 
     initByOldWay(callback) {
       // 1.9.91 <= version < 2.9.0：原来的方式初始化
-      ctx = wx.createCanvasContext(this.data.canvasId, this);
-      const canvas = new WxCanvas(ctx, this.data.canvasId, false);
-
+      let ctx = wx.createCanvasContext(this.data.canvasId, this);
+      let canvas;
+      if(ctx.canvas){
+        canvas=new WxCanvas(ctx, this.data.canvasId,false);
+        console.log("[zy]initByOldWay if",ctx,canvas); 
+      }else{
+        let obj=this.getCanvasAndCtx();
+        ctx=obj.ctx;
+        canvas = new WxCanvas(ctx, this.data.canvasId, true, obj.canvas);
+        console.log("[zy]initByOldWay else",ctx,obj.canvas);
+      } 
+      
       if (echarts.setPlatformAPI) {
         echarts.setPlatformAPI({
           createCanvas: () => canvas,
@@ -122,6 +152,7 @@ Component({
       // const canvasDpr = wx.getSystemInfoSync?.().pixelRatio // 微信旧的canvas不能传入dpr
       const canvasDpr = 1
       var query = wx.createSelectorQuery().in(this);
+      console.log("[zy]initByOldWay query",query);
       query.select('.ec-canvas').boundingClientRect(res => {
         if (typeof callback === 'function') {
           this.chart = callback(canvas, res.width, res.height, canvasDpr);
@@ -143,6 +174,7 @@ Component({
     initByNewWay(callback) {
       // version >= 2.9.0：使用新的方式初始化
       const query = wx.createSelectorQuery().in(this)
+      console.log("[zy]initByNewWay query",query);
       query
         .select('.ec-canvas')
         .fields({ node: true, size: true })
