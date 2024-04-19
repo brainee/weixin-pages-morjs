@@ -21,5 +21,8 @@ export default defineConfig([
     target: 'web',
     compileType: 'miniprogram',
     compileMode: 'bundle',
+    processNodeModules: {
+      include: [/tdesign\-miniprogram/]
+    }
   }
 ])

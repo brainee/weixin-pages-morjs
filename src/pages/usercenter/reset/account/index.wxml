@@ -1,0 +1,15 @@
+<!--pages/usercenter/login-account/index.wxml-->
+<view class="loginBox">
+  <f-brand-card loginType="{{accountLogin}}"></f-brand-card>
+
+  <view class="get-mobile-group">
+    <!-- prefixIcon="user-avatar"  -->
+    <t-input bindclear="inputChange" bindchange="inputChange" data-prop='account' value="{{formData.account}}" label="+86" placeholder="请输入手机号" clearable />
+
+  </view>
+
+  <view class="login-button-area">
+    <t-button bindtap='goStep2' theme="primary" size="large" block disabled="{{stepDisabled}}">下一步</t-button>
+  </view>
+
+</view>

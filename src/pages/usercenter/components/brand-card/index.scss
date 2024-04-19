@@ -1,0 +1,20 @@
+/* pages/usercenter/components/brand-card/index.wxss */
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .logo {
+    // background-color: red;
+    margin: 5% auto;
+    width: 200rpx;
+    height: 100rpx;
+  }
+
+  .logo-title {
+    // color: red;
+    margin: 0 auto 10%;
+    font-size: 48rpx;
+  }
+}

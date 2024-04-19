@@ -1,5 +1,10 @@
 <!--index.wxml-->
+<!-- #ifdef wechat -->
 <view class="container2">
-  <text class="user-motto">{{'hello,zy'}}</text>
+  <text class="user-motto">{{'hello,test with echart'}}</text>
   <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
 </view>
+<!-- #endif -->
+<!-- #ifndef wechat -->
+<text class="user-motto">{{'hello,test no echart'}}</text>
+<!-- #endif -->

@@ -1,14 +1,40 @@
 {
   "pages": [
+    "pages/usercenter/login/account/index",
     "pages/line/index",
-    "pages/index/index",
-    "pages/logs/logs"
+    "pages/usercenter/code/index",
+    "pages/usercenter/login/pass/index",
+    "pages/usercenter/reset/account/index",
+    "pages/usercenter/reset/reset/index",
+    "pages/usercenter/register/account/index",
+    "pages/usercenter/register/pass/index",
+    "pages/usercenter/register/mail/index",
+    "pages/usercenter/register/finish/index",
+    "pages/logs/logs",
+    "pages/index/index"
   ],
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar",
-    "t-icon": "/miniprogram_npm/tdesign-miniprogram/icon/icon",
     "ec-canvas": "/ec-canvas/ec-canvas",
-    "t-loading": "/miniprogram_npm/tdesign-miniprogram/loading/loading"
+    "t-icon": "/miniprogram_npm/tdesign-miniprogram/icon/icon",
+    "t-loading": "/miniprogram_npm/tdesign-miniprogram/loading/loading",
+    "t-popup": "/miniprogram_npm/tdesign-miniprogram/popup/popup",
+    "t-cell-group": "/miniprogram_npm/tdesign-miniprogram/cell-group/cell-group",
+    "t-cell": "/miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-input": "/miniprogram_npm/tdesign-miniprogram/input/input",
+    "t-button": "/miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-radio": "/miniprogram_npm/tdesign-miniprogram/radio/radio",
+    "t-link": "/miniprogram_npm/tdesign-miniprogram/link/link",
+    "t-cascader": "/miniprogram_npm/tdesign-miniprogram/cascader/cascader",
+    "t-toast": "/miniprogram_npm/tdesign-miniprogram/toast/toast"
+  },
+  "resolveAlias":{
+    "config/*": "config/*",
+    "services/*": "services/*",
+    "model/*": "model/*",
+    "utils/*": "utils/*",
+    "components/*": "components/*",
+    "tdesign-miniprogram/*": "miniprogram_npm/tdesign-miniprogram/*"
   },
   "window": {
     "backgroundTextStyle": "light",

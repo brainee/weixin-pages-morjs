@@ -1,0 +1,43 @@
+<!--pages/usercenter/validate-code/index.wxml-->
+<view class='container'>
+
+  <view class='main-title' bindtap="test">
+    企业邮箱认证
+  </view>
+
+  <view class="code-box">
+    <t-input bindclear="inputChangeNormal" bindchange="inputChangeNormal" data-prop='name' value="{{formData.name}}" placeholder="真实姓名" clearable />
+    <t-cell title="选择单位" arrow hover note="{{unitShowText}}" bind:click="onTitlePicker" />
+    <t-picker visible="{{unitVisible}}" value="{{unitValue}}" data-key="unit" title="{{unitTitle}}" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChangeOfUnit" bindpick="onColumnChange" bindcancel="onPickerCancel">
+      <t-picker-item options="{{units}}"></t-picker-item>
+    </t-picker>
+
+    <block>
+        <t-cascader
+        visible="{{airportVisible}}"
+        value="{{airportValue}}"
+        options="{{citys}}"
+        title="{{airportTitle}}"
+        data-key="airport"
+        bind:change="onChangeOfCascader"
+        bind:pick="onPickOfCascader"
+        keys="{{mykeys}}"
+      />
+
+      <t-picker visible="{{airlineVisible}}" value="{{airlineValue}}" data-key="airline" title="{{airlineTitle}}" cancelBtn="取消" confirmBtn="确认" bindchange="onPickerChangeOfAirline" bindpick="onColumnChange" bindcancel="onPickerCancel">
+        <t-picker-item options="{{airlines}}"></t-picker-item>
+      </t-picker>
+
+      <block wx:if="{{otherVisible}}">
+        <t-input bindclear="inputChangeNormal" bindchange="inputChangeNormal" data-prop='unit' value="{{formData.unit}}" placeholder="请填写工作单位" clearable />
+      </block>
+    </block>
+
+    <t-input bindclear="inputChangeNormal" bindchange="inputChangeNormal" data-prop='depart' value="{{formData.depart}}" placeholder="请填写所在部门" clearable />
+    <t-input bindclear="inputChangeNormal" bindchange="inputChangeNormal" data-prop='mail' value="{{formData.mail}}" placeholder="邮箱地址" clearable />
+  </view>
+
+  <view class="login-button-area">
+    <t-button bindtap='submit' theme="primary" size="large" block disabled="{{stepDisabled}}">提交认证申请</t-button>
+  </view>
+</view>

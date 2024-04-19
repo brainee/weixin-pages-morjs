@@ -1,0 +1,60 @@
+/* pages/usercenter/validate-code/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, white, lightblue);
+}
+
+.container {
+  padding-top: 70rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  // width: 100%;
+  // height: 100%;
+  .main-title {
+    font-size: 50rpx;
+    color: #2F343E;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 12rpx;
+  }
+  .code-box{
+    margin-top: 63rpx;
+    width: 100%;
+  }
+  .time-box {
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // align-items: flex-end;
+    .regain {
+      color: #3399cc;
+    }
+    .regain-info {
+      display: flex;
+      color: #b5b5b5;
+    }
+    .switch-type{
+      color: #3399cc;
+    }
+  }
+  .login-button-area{
+    width: 100%;
+    height: 100%;
+    align-self: flex-end;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}

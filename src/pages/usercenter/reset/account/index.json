@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "f-brand-card":"../../components/brand-card/index"
+  }
+}
