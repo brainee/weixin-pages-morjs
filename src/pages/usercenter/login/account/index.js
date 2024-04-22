@@ -6,6 +6,7 @@ Page({
         accountLogin: "账号登录",
         stepDisabled: true,
         readedPolicy: false,
+        isChecked: false,
         navigatorProps: {
             url: "/pages/usercenter/register/account/index"
         }
@@ -39,6 +40,10 @@ Page({
         this.setData({
             formData: this.data.formData
         });
+    },
+    goLine(){
+        this.goStep2();
+        wx.navigateTo({ url: `/pages/line/index`}); 
     },
     goStep2() {
         let readedPolicy = this.data.readedPolicy;
@@ -99,9 +104,11 @@ Page({
         }
     },
     onChangeOfRead(e) {
+        wx.showToast({ title: JSON.stringify(e.detail) + "---" });
         // wx.showToast({ title: e.detail.checked + "" });
         this.setData({
-            readedPolicy: e.detail.checked
+            readedPolicy: e.detail.checked,
+            isChecked: !this.data.isChecked,
         });
     },
     agreeUser(e) {

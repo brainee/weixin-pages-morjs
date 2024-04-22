@@ -21,6 +21,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onClickBrand: function () { 
+      wx.showModal({title:"zy2",content:"点击了品牌卡片"})
+    }
   }
 })

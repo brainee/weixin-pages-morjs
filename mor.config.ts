@@ -13,7 +13,10 @@ export default defineConfig([
     sourceType: 'wechat',
     target: 'alipay',
     compileType: 'miniprogram',
-    compileMode: 'bundle'
+    compileMode: 'bundle',
+    processNodeModules: {
+      include: [/tdesign\-miniprogram/]
+    }
   },
   {
     name: 'web',
