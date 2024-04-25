@@ -46,6 +46,13 @@
       />
     </t-tabs>
   </view>
+    <goods-list
+    wr-class="goods-list-container"
+    goodsList="{{goodsList}}"
+    bind:click="goodListClickHandle"
+    bind:addcart="goodListAddCartHandle"
+  />
+  <load-more list-is-empty="{{!goodsList.length}}" status="{{goodsListLoadStatus}}" bind:retry="onReTry" />
   <t-fab icon="add" bind:click="handleClick" aria-label="增加"></t-fab>
   <t-toast id="t-toast" />
 </view>

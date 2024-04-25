@@ -17,6 +17,8 @@
       <t-tab-panel wx:for="{{tabList}}" wx:for-index="index" wx:key="index" label="{{item.text}}" value="{{item.key}}"></t-tab-panel>
     </t-tabs>
   </view>
+    <goods-list wr-class="goods-list-container" goodsList="{{goodsList}}" bind:click="goodListClickHandle" bind:addcart="goodListAddCartHandle"></goods-list>
+  <load-more list-is-empty="{{!goodsList.length}}" status="{{goodsListLoadStatus}}" bind:retry="onReTry"></load-more>
   <t-fab icon="add" bind:click="handleClick" aria-label="增加"></t-fab>
   <t-toast id="t-toast"></t-toast>
 </view>

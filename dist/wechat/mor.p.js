@@ -18,6 +18,7 @@ var appConfig = {
   "usingComponents": {
     "navigation-bar": "/components/navigation-bar/navigation-bar",
     "ec-canvas": "/ec-canvas/ec-canvas",
+    "t-image": "/components/webp-image/index",
     "t-icon": "tdesign-miniprogram/icon/icon",
     "t-loading": "tdesign-miniprogram/loading/loading",
     "t-popup": "tdesign-miniprogram/popup/popup",
@@ -33,7 +34,6 @@ var appConfig = {
     "t-swiper": "tdesign-miniprogram/swiper/swiper",
     "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
     "t-toast": "tdesign-miniprogram/toast/toast",
-    "t-image": "/components/webp-image/index",
     "t-tabs": "tdesign-miniprogram/tabs/tabs",
     "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel"
   },
