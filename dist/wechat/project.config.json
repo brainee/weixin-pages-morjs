@@ -47,9 +47,7 @@
     "useCompilerPlugins": []
   },
   "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {
-    "wxext14566970e7e9f62": "2.27.3"
-  },
+  "simulatorPluginLibVersion": {},
   "appid": "wx5a194a890ecc89ba",
   "condition": {},
   "editorSetting": {

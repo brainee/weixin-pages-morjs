@@ -1,8 +1,0 @@
-<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
-
-<view class="{{prefix}}-overlay {{transitionClass}} class" style="{{_._style(['--td-overlay-transition-duration:' + duration + 'ms', 'z-index:' + _zIndex, computedStyle, style, customStyle])}}" aria-role="{{ ariaRole || 'button' }}" aria-label="{{ ariaLabel || '关闭' }}" a:if="{{realVisible && preventScrollThrough}}" onTap="handleClick" catchTouchMove="noop" onTransitionEnd="onTransitionEnd">
-  <slot></slot>
-</view>
-<view class="{{prefix}}-overlay {{transitionClass}} class" style="{{_._style(['z-index:' + _zIndex, computedStyle, style, customStyle])}}" aria-role="{{ ariaRole || 'button' }}" aria-label="{{ ariaLabel || '关闭' }}" a:elif="{{realVisible}}" onTap="handleClick" onTransitionEnd="onTransitionEnd">
-  <slot></slot>
-</view>
