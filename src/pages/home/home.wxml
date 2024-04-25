@@ -46,6 +46,6 @@
       />
     </t-tabs>
   </view>
-
+  <t-fab icon="add" bind:click="handleClick" aria-label="增加"></t-fab>
   <t-toast id="t-toast" />
 </view>

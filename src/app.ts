@@ -1,7 +1,7 @@
-import { wApp } from '@morjs/core'
+// import { wApp } from '@morjs/core'
 import { checkWxSession } from './services/usercenter/loginService';
 
-wApp({
+App({
   globalData:  {
     isQy: false,
     session: {}

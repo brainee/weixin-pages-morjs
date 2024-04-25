@@ -1,8 +1,8 @@
-<navigation-bar title="Weixin1" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <view class="container">
        <view style="text-align: center; color: #b9b9b9" wx:if="{{true}}">
         <t-loading theme="circular" size="40rpx" text="加载中..." inherit-color />
-        <t-icon slot="left-icon" prefix="wr" name="search" size="40rpx" color="#bbb" />
+        
       </view>
   <view class="userinfo">
     <block wx:if="{{canIUseOpenData}}">
@@ -22,6 +22,8 @@
     </block>
   </view>
   <view class="usermotto">
+    <t-icon slot="left-icon" prefix="wr" name="search" size="40rpx" color="#bbb" />
     <text class="user-motto">{{motto}}</text>
   </view>
+  <t-fab icon="add" bind:click="bindViewTap" aria-label="增加"></t-fab>
 </view>

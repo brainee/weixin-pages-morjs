@@ -1,8 +1,8 @@
-import { fetchHome } from '../../services/home/home';
-import { fetchGoodsList } from '../../services/good/fetchGoods';
 import Toast from 'tdesign-miniprogram/toast/index';
+// import { checkWxSession} from 'services/usercenter/loginService';
 
-import { checkWxSession} from 'services/usercenter/loginService';
+import { fetchGoodsList } from '../../services/good/fetchGoods';
+import { fetchHome } from '../../services/home/home';
 Page({
   data: {
     imgSrcs: [],
@@ -17,7 +17,9 @@ Page({
     navigation: { type: 'dots' },
     swiperImageProps: { mode: 'scaleToFill' },
   },
-
+  handleClick(e) {
+    console.log("[zy]fab handleClick",e);
+  },
   goodListPagination: {
     index: 0,
     num: 20,
