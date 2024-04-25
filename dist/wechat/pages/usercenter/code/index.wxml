@@ -1,0 +1,46 @@
+<!--pages/usercenter/validate-code/index.wxml-->
+<view class="container">
+
+  <view class="main-title" bindtap="test">
+    输入短信验证码
+  </view>
+
+  <view class="sub-title">
+    请输入发送至<text class="phone">+86 {{account}}</text>的 6 位验证码，有效期 5 分钟
+  </view>
+
+  <block wx:if="{{leftSendTimes>0}}">
+
+    <view class="code-box" bindtap="getFocus">
+
+      <view class="{{code.length==0?'active':'input-box'}}">{{code[0]}}</view>
+
+      <view class="{{code.length==1?'active':'input-box'}}">{{code[1]}}</view>
+
+      <view class="{{code.length==2?'active':'input-box'}}">{{code[2]}}</view>
+
+      <view class="{{code.length==3?'active':'input-box'}}">{{code[3]}}</view>
+
+      <view class="{{code.length==4?'active':'input-box'}}">{{code[4]}}</view>
+
+      <view class="{{code.length==5?'active':'input-box'}}">{{code[5]}}</view>
+
+    </view>
+
+    <input bindinput="getCode" class="input-number" type="number" focus="{{isFocus}}" maxlength="6" />
+  </block>
+  <view class="time-box">
+    <view class="regain" hover-class="btn-hover" wx:if="{{isRegain&&leftSendTimes>0}}" bindtap="regain">重新获取验证码</view>
+    <view class="over-times" wx:elif="{{leftSendTimes<=0}}">已无可重试次数，请稍后再试</view>
+    <view class="regain-info" wx:else>
+      <text class="time">{{time}}</text>秒后可重新获取验证码
+    </view>
+
+    <view wx:if="{{operate=='login'}}" class="switch-type" hover-class="btn-hover" bindtap="switchPass">切换到密码验证</view>
+  </view>
+
+  <view wx:if="{{operate=='reset'||operate=='register'}}" class="login-button-area">
+    <t-button bindtap="goNext" theme="primary" size="large" block disabled="{{stepDisabled}}">下一步</t-button>
+  </view>
+
+</view>

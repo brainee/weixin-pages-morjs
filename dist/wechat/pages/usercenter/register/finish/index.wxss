@@ -1,0 +1,11 @@
+/* pages/usercenter/login-account/index.wxss */
+.loginBox {
+  width: 80%;
+  margin: 10% auto;
+}
+.loginBox .login-button-area {
+  margin-top: 40rpx;
+}
+.loginBox .login-button-area button {
+  margin-top: 12rpx;
+}

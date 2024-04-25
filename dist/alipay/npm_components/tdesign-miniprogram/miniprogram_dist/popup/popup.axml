@@ -1,0 +1,16 @@
+<import-sjs name="popup" from="./popup.sjs"></import-sjs>
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<view style="{{_._style([popup.getPopupStyles(zIndex), style, customStyle])}}" class="{{_.cls(classPrefix, [placement])}} {{transitionClass}} class {{prefix}}-class" a:if="{{realVisible}}" onTransitionEnd="onTransitionEnd">
+  <!-- 暂时移除：aria-role="dialog" aria-modal="{{ true }}"，关联：https://github.com/Tencent/tdesign-miniprogram/issues/2142 -->
+  <view data-prevention="{{preventScrollThrough || (overlayProps ? !!overlayProps.preventScrollThrough : false)}}" class="{{classPrefix}}__content {{prefix}}-class-content" onTouchMove="{{popup.onContentTouchMove}}">
+    <slot name="content"></slot>
+    <slot></slot>
+    <view class="{{classPrefix}}__close" onTap="handleClose">
+      <t-icon name="close" size="64rpx" a:if="{{closeBtn}}" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+      <slot name="close-btn" class="{{classPrefix}}-slot"></slot>
+    </view>
+  </view>
+</view>
+
+<t-overlay id="popup-overlay" visible="{{visible}}" z-index="{{overlayProps && overlayProps.zIndex || 11000}}" duration="{{overlayProps && overlayProps.duration || 300}}" background-color="{{overlayProps && overlayProps.backgroundColor || ''}}" prevent-scroll-through="{{preventScrollThrough || (overlayProps ? !!overlayProps.preventScrollThrough : false)}}" custom-style="{{overlayProps && overlayProps.style || ''}}" a:if="{{showOverlay}}" onTap="handleOverlayClick" ref="$morSaveRef" morTagId="popup-overlay" morTagName="t-overlay"></t-overlay>

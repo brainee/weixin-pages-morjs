@@ -1,0 +1,9 @@
+<!--pages/usercenter/login-account/index.wxml-->
+<view class="loginBox">
+  <f-brand-card loginType="{{accountLogin}}"></f-brand-card>
+
+  <view class="login-button-area">
+    <t-button bindtap="finish" theme="primary" size="large" block disabled="{{stepDisabled}}">完成注册</t-button>
+  </view>
+
+</view>

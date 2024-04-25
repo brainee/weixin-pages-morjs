@@ -1,0 +1,9 @@
+<t-tab-bar value="{{active}}" split="{{false}}" onChange="onChange" ref="$morSaveRef" morTagName="t-tab-bar">
+	<t-tab-bar-item a:for="{{list}}" a:for-item="item" a:for-index="index" a:key="index" ref="$morSaveRef" morTagName="t-tab-bar-item">
+		<view class="custom-tab-bar-wrapper">
+			<t-icon prefix="wr" name="{{item.icon}}" size="48rpx" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+			<view class="text">{{ item.text }}</view>
+		</view>
+	</t-tab-bar-item>
+</t-tab-bar>
+

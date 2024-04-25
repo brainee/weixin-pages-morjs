@@ -1,0 +1,11 @@
+{
+	"ios": {
+		"name": "brainArtificial"
+	},
+	"android": {
+		"name": "brainArtificial"
+	},
+	"common": {
+		"name": "brainArtificial"
+	}
+}

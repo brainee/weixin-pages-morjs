@@ -1,0 +1,40 @@
+/* pages/usercenter/login-account/index.wxss */
+.loginBox {
+  width: 80%;
+  margin: 10% auto;
+}
+.loginBox .get-mobile-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.loginBox .login-button-area {
+  margin-top: 40rpx;
+}
+.loginBox .login-button-area button {
+  margin-top: 12rpx;
+}
+.loginBox .login-button-area .register-can {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 93rpx;
+  font-size: 26rpx;
+  background-color: #fff;
+}
+.loginBox .user-policy-can {
+  --td-radio-font-size:26rpx;
+  --td-radio-icon-size:38rpx;
+  --td-radio-label-line-height:48rpx;
+  margin: 30% auto 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 26rpx;
+}
+.loginBox .user-policy-can .agree-p {
+  color: cornflowerblue;
+  text-decoration: underline;
+}

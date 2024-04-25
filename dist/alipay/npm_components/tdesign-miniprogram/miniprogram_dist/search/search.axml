@@ -1,0 +1,19 @@
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<view style="{{_._style([style, customStyle])}}" class="class {{classPrefix}} {{prefix}}-class">
+  <view class="{{classPrefix}}__input-box {{prefix}}-{{focus ? 'is-focused' : 'not-focused'}} {{classPrefix}}__input-box--{{center ? 'center' : ''}} {{classPrefix}}__input-box--{{shape}} {{prefix}}-class-input-container">
+    <!-- <view wx:if="{{label}}" class="{{classPrefix}}__label {{prefix}}-class-label">{{label}}</view>
+    <slot name="label" /> -->
+    <t-icon name="{{leftIcon}}" size="24" class="{{prefix}}-icon {{prefix}}-class-left" aria-hidden="{{true}}" a:if="{{leftIcon}}" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+    <slot name="left-icon" a:else></slot>
+
+    <input type="{{type}}" name="input" maxlength="{{maxlength}}" disabled="{{disabled}}" class="{{prefix}}-input__keyword {{prefix}}-class-input" focus="{{focus}}" value="{{value}}" confirm-type="{{confirmType}}" confirm-hold="{{confirmHold}}" cursor="{{cursor}}" adjust-position="{{adjustPosition}}" always-embed="{{alwaysEmbed}}" selection-start="{{selectionStart}}" selection-end="{{selectionEnd}}" hold-keyboard="{{holdKeyboard}}" cursor-spacing="{{cursorSpacing}}" placeholder="{{placeholder}}" placeholder-style="{{placeholderStyle}}" placeholder-class="{{placeholderClass}} {{classPrefix}}__placeholder {{classPrefix}}__placeholder--{{center ? 'center': 'normal'}}" onInput="onInput" onFocus="onFocus" onBlur="onBlur" onConfirm="onConfirm" />
+    <view class="{{classPrefix}}__clear {{prefix}}-class-clear" aria-role="button" aria-label="清除" a:if="{{value !=='' && clearable}}" catchTap="handleClear">
+      <t-icon name="close-circle-filled" size="24" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+    </view>
+  </view>
+  <view class="{{classPrefix}}__search-action {{prefix}}-class-action" aria-role="button" a:if="{{action}}" catchTap="onActionClick">
+    {{action}}
+  </view>
+  <slot name="action" a:else></slot>
+</view>

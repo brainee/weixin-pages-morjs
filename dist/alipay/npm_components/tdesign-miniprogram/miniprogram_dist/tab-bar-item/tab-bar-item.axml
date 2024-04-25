@@ -1,0 +1,25 @@
+<import src="../common/template/icon.axml"></import>
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<view style="{{_._style([style, customStyle])}}" class="{{_.cls(classPrefix, [['split', split], ['text-only', !icon], ['crowded', crowded], shape])}} class {{prefix}}-class">
+  <view class="{{_.cls(classPrefix + '__content', [['checked', isChecked], theme])}}" hover-class="{{classPrefix}}__content--active" hover-stay-time="{{200}}" aria-selected="{{(!hasChildren || !isSpread) && isChecked ? true : false}}" aria-expanded="{{hasChildren && isSpread ? true : ''}}" aria-role="{{hasChildren ? 'button' : 'tab'}}" aria-label="{{ ariaLabel || (badgeProps.dot || badgeProps.count ? _.getBadgeAriaLabel({ ...badgeProps }) : '') }}" onTap="toggle">
+    <view class="{{classPrefix}}__icon" style="height: {{iconOnly ? 24 : 20}}px" aria-hidden="{{ badgeProps.dot || badgeProps.count }}" a:if="{{icon}}">
+      <t-badge count="{{badgeProps.count || 0}}" max-count="{{badgeProps.maxCount || 99}}" dot="{{badgeProps.dot || false}}" content="{{badgeProps.content || ''}}" size="{{badgeProps.size || 'medium'}}" visible="{{badgeProps.visible}}" offset="{{badgeProps.offset || [0,0]}}" t-class-count="{{prefix + '-badge-class'}}" a:if="{{badgeProps.dot || badgeProps.count}}" ref="$morSaveRef" morTagName="t-badge">
+        <template is="icon" data="{{ size: iconOnly ? 24 : 20, ..._icon }}"></template>
+      </t-badge>
+      <template is="icon" data="{{ ariaHidden: !iconOnly, size: iconOnly ? 24 : 20, ..._icon }}" a:else></template>
+      <slot name="icon"></slot>
+    </view>
+    <view class="{{_.cls(classPrefix + '__text', [['small', !!icon]])}}">
+      <t-icon name="view-list" size="16" t-class="{{classPrefix}}__icon-menu" a:if="{{hasChildren}}" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+      <slot></slot>
+    </view>
+  </view>
+
+  <view class="{{classPrefix}}__spread" a:if="{{hasChildren && isSpread}}">
+    <view class="{{classPrefix}}__spread-item" hover-class="{{classPrefix}}__spread-item--active" hover-stay-time="{{200}}" data-value="{{child.value || index}}" aria-role="tab" a:for="{{subTabBar}}" a:for-item="child" a:for-index="index" a:key="index" onTap="selectChild">
+      <view class="{{classPrefix}}__spread-item-split" a:if="{{index !== 0}}"></view>
+      <view class="{{classPrefix}}__spread-item-text" data-value="{{child.value || index}}">{{ child.label }}</view>
+    </view>
+  </view>
+</view>

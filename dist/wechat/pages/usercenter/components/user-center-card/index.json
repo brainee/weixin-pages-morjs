@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-icon": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/icon/icon",
+    "t-avatar": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/avatar/avatar"
+  }
+}

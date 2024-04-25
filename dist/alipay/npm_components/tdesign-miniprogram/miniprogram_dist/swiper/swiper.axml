@@ -1,0 +1,14 @@
+<import-sjs name="thisSjs" from="./index.sjs"></import-sjs>
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<import src="../common/template/image.axml"></import>
+
+<view class="class {{prefix}}-class {{classPrefix}}" style="{{_._style([style, customStyle])}}">
+  <swiper class="{{classPrefix}}-host" autoplay="{{autoplay}}" current="{{current}}" interval="{{interval}}" duration="{{duration}}" circular="{{loop}}" vertical="{{direction == 'vertical'}}" easing-function="{{easingFunction}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" snap-to-edge="{{snapToEdge}}" display-multiple-items="{{displayMultipleItems}}" style="height: {{_.addUnit(height)}}" onChange="onChange">
+    <swiper-item class="{{_.cls(classPrefix + '__item', [['preview', thisSjs.isPrev(navCurrent, index, list)], ['next', thisSjs.isNext(navCurrent, index, list)]])}}" data-index="{{index}}" aria-hidden="{{navCurrent !== index}}" aria-role="image" aria-label="{{_.isObject(item) ? item.ariaLabel : ''}}" a:for="{{list}}" a:key="index" onTap="onTap">
+      <template is="image" data="{{ class: classPrefix + '__image-host', tClass: thisSjs.getImageClass(prefix, navCurrent, index, list), style: 'height: ' + _.addUnit(height), src: _.isObject(item) ? item.value : item, mode: 'aspectFill', dataset: index, ...imageProps, bindload: 'onImageLoad' }}"></template>
+    </swiper-item>
+  </swiper>
+  <t-swiper-nav t-class="{{prefix}}-class-nav" type="{{navigation.type || 'dots'}}" current="{{navCurrent || 0}}" total="{{list.length || 0}}" direction="{{direction || 'horizontal'}}" pagination-position="{{paginationPosition || 'bottom'}}" min-show-num="{{navigation.minShowNum || 2}}" show-controls="{{navigation.showControls || false}}" a:if="{{navigation}}" onNavBtnChange="onNavBtnChange" ref="$morSaveRef" morTagName="t-swiper-nav"></t-swiper-nav>
+  <slot name="nav"></slot>
+</view>

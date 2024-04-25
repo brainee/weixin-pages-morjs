@@ -1,0 +1,22 @@
+<!--pages/usercenter/validate-code/index.wxml-->
+<view class="container">
+
+  <view class="main-title" bindtap="test">
+    输入密码
+  </view>
+
+  <view class="code-box">
+    <t-input bindclear="inputChange" bind:click="changEye" bindchange="inputChange" data-prop="password" value="{{formData.password}}" prefixIcon="lock-on" placeholder="请输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable></t-input>
+  </view>
+  <view class="time-box">
+    <view class="regain-info">
+      忘记密码？
+    <view class="regain" hover-class="btn-hover" bindtap="regain">点此重置</view>
+    </view>
+    
+    <view class="switch-type" hover-class="btn-hover" bindtap="switchCode">切换到手机号验证</view>
+  </view>
+  <view class="login-button-area">
+    <t-button bindtap="login" theme="primary" size="large" block disabled="{{stepDisabled}}">登录</t-button>
+  </view>
+</view>

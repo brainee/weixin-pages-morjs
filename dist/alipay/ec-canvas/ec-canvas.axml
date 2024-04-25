@@ -1,0 +1,4 @@
+<!-- 新的：接口对其了H5 -->
+<canvas type="2d" class="ec-canvas" canvas-id="{{ canvasId }}" a:if="{{isUseNewCanvas}}" onInit="init" onTouchStart="{{ ec.disableTouch ? '' : 'touchStart' }}" onTouchMove="{{ ec.disableTouch ? '' : 'touchMove' }}" onTouchEnd="{{ ec.disableTouch ? '' : 'touchEnd' }}"></canvas>
+<!-- 旧的 -->
+<canvas class="ec-canvas" canvas-id="{{ canvasId }}" a:else onInit="init" onTouchStart="{{ ec.disableTouch ? '' : 'touchStart' }}" onTouchMove="{{ ec.disableTouch ? '' : 'touchMove' }}" onTouchEnd="{{ ec.disableTouch ? '' : 'touchEnd' }}"></canvas>

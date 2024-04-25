@@ -1,0 +1,16 @@
+/* pages/usercenter/components/brand-card/index.wxss */
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.brand-card .logo {
+  margin: 5% auto;
+  width: 200rpx;
+  height: 100rpx;
+}
+.brand-card .logo-title {
+  margin: 0 auto 10%;
+  font-size: 48rpx;
+}

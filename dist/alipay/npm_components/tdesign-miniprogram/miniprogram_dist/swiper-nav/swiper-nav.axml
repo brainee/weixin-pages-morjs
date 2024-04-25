@@ -1,0 +1,13 @@
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+
+<view class="class {{prefix}}-class {{classPrefix}}__btn" style="{{_._style([style, customStyle])}}" a:if="{{showControls}}">
+  <view class="{{classPrefix}}__btn--prev" data-dir="prev" aria-role="button" aria-label="上一张" onTap="nav"></view>
+  <view class="{{classPrefix}}__btn--next" data-dir="next" aria-role="button" aria-label="下一张" onTap="nav"></view>
+</view>
+<view style="{{_._style([style, customStyle])}}" class="class {{prefix}}-class {{classPrefix}} {{classPrefix}}--{{direction}} {{classPrefix}}__{{type}} {{classPrefix}}--{{paginationPosition}}" a:if="{{total >= minShowNum}}">
+  <block a:if="{{ type === 'dots' || type === 'dots-bar'}}">
+    <view class="{{_.cls(classPrefix + '__' + type + '-item', [['active', current === idx], direction])}}" a:for="{{total}}" a:for-index="idx" a:key="idx"></view>
+  </block>
+  <block a:if="{{ type === 'fraction'}}"> {{current + 1}}/{{total}} </block>
+</view>

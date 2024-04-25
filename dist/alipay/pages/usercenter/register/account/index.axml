@@ -1,0 +1,32 @@
+<!--pages/usercenter/login-account/index.wxml-->
+<view class="loginBox">
+  <f-brand-card loginType="{{accountLogin}}" ref="$morSaveRef" morTagName="f-brand-card"></f-brand-card>
+
+  <view class="get-mobile-group">
+    <!-- prefixIcon="user-avatar"  -->
+    <t-input data-prop="account" value="{{formData.account}}" label="+86" placeholder="请输入手机号" clearable onClear="inputChange" onChange="inputChange" ref="$morSaveRef" morTagName="t-input"></t-input>
+
+  </view>
+
+  <view class="login-button-area">
+    <t-button theme="primary" size="large" block disabled="{{stepDisabled}}" onTap="goStep2" ref="$morSaveRef" morTagName="t-button">下一步</t-button>
+    <t-button open-type="getPhoneNumber" theme="light" size="large" block icon="logo-wechat" onGetphonenumber="getPhoneNumber" ref="$morSaveRef" morTagName="t-button">
+      快捷获取手机号
+    </t-button>
+
+    <view class="register-can">
+      已有账号？
+      <t-link size="small" theme="primary" content="立即登录" suffixIcon="jump" hover navigatorProps="{{navigatorProps}}" ref="$morSaveRef" morTagName="t-link"></t-link>
+    </view>
+  </view>
+
+
+  <view class="user-policy-can">
+    <t-radio block="{{false}}" onChange="onChangeOfRead" ref="$morSaveRef" morTagName="t-radio">我已阅读并接受</t-radio>
+    <!-- <span> -->
+    <p class="agree-p" onTap="agreeUser">《服务协议》</p>
+    <p>和</p>
+    <p class="agree-p" onTap="agreePrivacy">《隐私政策》</p>
+    <!-- </span> -->
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-tab-bar": "../npm_components/tdesign-miniprogram/miniprogram_dist/tab-bar/tab-bar",
+    "t-tab-bar-item": "../npm_components/tdesign-miniprogram/miniprogram_dist/tab-bar-item/tab-bar-item",
+    "t-icon": "../npm_components/tdesign-miniprogram/miniprogram_dist/icon/icon"
+  }
+}

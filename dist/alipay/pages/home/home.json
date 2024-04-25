@@ -1,0 +1,18 @@
+{
+  "onReachBottomDistance": 10,
+  "backgroundTextStyle": "light",
+  "usingComponents": {
+    "t-search": "../../npm_components/tdesign-miniprogram/miniprogram_dist/search/search",
+    "t-loading": "../../npm_components/tdesign-miniprogram/miniprogram_dist/loading/loading",
+    "t-swiper": "../../npm_components/tdesign-miniprogram/miniprogram_dist/swiper/swiper",
+    "t-swiper-nav": "../../npm_components/tdesign-miniprogram/miniprogram_dist/swiper-nav/swiper-nav",
+    "t-icon": "../../npm_components/tdesign-miniprogram/miniprogram_dist/icon/icon",
+    "t-toast": "../../npm_components/tdesign-miniprogram/miniprogram_dist/toast/toast",
+    "t-tabs": "../../npm_components/tdesign-miniprogram/miniprogram_dist/tabs/tabs",
+    "t-tab-panel": "../../npm_components/tdesign-miniprogram/miniprogram_dist/tab-panel/tab-panel",
+    "t-image": "../../components/webp-image/index"
+  },
+  "defaultTitle": "首页",
+  "allowsBounceVertical": "YES",
+  "pullRefresh": true
+}

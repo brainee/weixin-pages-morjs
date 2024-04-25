@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-cell": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/cell/cell",
+    "t-cell-group": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/cell-group/cell-group",
+    "t-badge": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/badge/badge",
+    "t-icon": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/icon/icon"
+  }
+}

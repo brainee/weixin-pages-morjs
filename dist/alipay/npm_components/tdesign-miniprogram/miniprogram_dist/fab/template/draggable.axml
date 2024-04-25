@@ -1,0 +1,8 @@
+<import src="../../common/template/button.axml"></import>
+<import-sjs name="_" from="../../common/utils.sjs"></import-sjs>
+
+<template name="draggable">
+  <t-draggable id="draggable" style="right: 16px; bottom: 32px; {{_._style([style, customStyle, moveStyle])}}" t-class="{{prefix}}}-fab__button" direction="{{draggable === true ? 'all' : draggable}}" onMove="onMove">
+    <template is="button" data="{{...buttonData}}"></template>
+  </t-draggable>
+</template>

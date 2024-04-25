@@ -1,0 +1,9 @@
+<!--pages/usercenter/login-account/index.wxml-->
+<view class="loginBox">
+  <f-brand-card loginType="{{accountLogin}}" ref="$morSaveRef" morTagName="f-brand-card"></f-brand-card>
+
+  <view class="login-button-area">
+    <t-button theme="primary" size="large" block disabled="{{stepDisabled}}" onTap="finish" ref="$morSaveRef" morTagName="t-button">完成注册</t-button>
+  </view>
+
+</view>

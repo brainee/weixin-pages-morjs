@@ -1,0 +1,34 @@
+<!--pages/usercenter/validate-code/index.wxml-->
+<view class="container">
+
+  <view class="main-title" onTap="test">
+    企业邮箱认证
+  </view>
+
+  <view class="code-box">
+    <t-input data-prop="name" value="{{formData.name}}" placeholder="真实姓名" clearable onClear="inputChangeNormal" onChange="inputChangeNormal" ref="$morSaveRef" morTagName="t-input"></t-input>
+    <t-cell title="选择单位" arrow hover note="{{unitShowText}}" onClick="onTitlePicker" ref="$morSaveRef" morTagName="t-cell"></t-cell>
+    <t-picker visible="{{unitVisible}}" value="{{unitValue}}" data-key="unit" title="{{unitTitle}}" cancelBtn="取消" confirmBtn="确认" onChange="onPickerChangeOfUnit" onPick="onColumnChange" onCancel="onPickerCancel">
+      <t-picker-item options="{{units}}"></t-picker-item>
+    </t-picker>
+
+    <block>
+        <t-cascader visible="{{airportVisible}}" value="{{airportValue}}" options="{{citys}}" title="{{airportTitle}}" data-key="airport" keys="{{mykeys}}" onChange="onChangeOfCascader" onPick="onPickOfCascader" ref="$morSaveRef" morTagName="t-cascader"></t-cascader>
+
+      <t-picker visible="{{airlineVisible}}" value="{{airlineValue}}" data-key="airline" title="{{airlineTitle}}" cancelBtn="取消" confirmBtn="确认" onChange="onPickerChangeOfAirline" onPick="onColumnChange" onCancel="onPickerCancel">
+        <t-picker-item options="{{airlines}}"></t-picker-item>
+      </t-picker>
+
+      <block a:if="{{otherVisible}}">
+        <t-input data-prop="unit" value="{{formData.unit}}" placeholder="请填写工作单位" clearable onClear="inputChangeNormal" onChange="inputChangeNormal" ref="$morSaveRef" morTagName="t-input"></t-input>
+      </block>
+    </block>
+
+    <t-input data-prop="depart" value="{{formData.depart}}" placeholder="请填写所在部门" clearable onClear="inputChangeNormal" onChange="inputChangeNormal" ref="$morSaveRef" morTagName="t-input"></t-input>
+    <t-input data-prop="mail" value="{{formData.mail}}" placeholder="邮箱地址" clearable onClear="inputChangeNormal" onChange="inputChangeNormal" ref="$morSaveRef" morTagName="t-input"></t-input>
+  </view>
+
+  <view class="login-button-area">
+    <t-button theme="primary" size="large" block disabled="{{stepDisabled}}" onTap="submit" ref="$morSaveRef" morTagName="t-button">提交认证申请</t-button>
+  </view>
+</view>

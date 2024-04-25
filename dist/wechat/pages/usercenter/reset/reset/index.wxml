@@ -1,0 +1,20 @@
+<!--pages/usercenter/validate-code/index.wxml-->
+<view class="container">
+
+  <view class="main-title" bindtap="test">
+    {{mainTitle}}
+  </view>
+  <view class="sub-title">
+    密码仅可由数字、英文字母或英文符号组成，且需包含其中至少两种类型，长度不少于 8 个字符
+  </view>
+  <view class="code-box">
+    <t-input bindclear="inputChange" bind:click="changEye" bindchange="inputChange" data-prop="password" value="{{formData.password}}" prefixIcon="lock-on" placeholder="请输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable></t-input>
+    <t-input style="margin-top: 10rpx;" bindclear="inputChange2" bind:click="changEye" bindchange="inputChange2" data-prop="password2" value="{{formData.password2}}" prefixIcon="lock-on" placeholder="请再次输入密码" suffixIcon="{{ { name: showPassword?'browse':'browse-off' } }}" type="{{showPassword?'':'password'}}" clearable></t-input>
+
+  </view>
+
+  <view class="login-button-area">
+    <t-button wx:if="{{operate=='reset'}}" bindtap="resetPass" theme="primary" size="large" block disabled="{{stepDisabled}}">确认</t-button>
+    <t-button wx:if="{{operate=='register'}}" bindtap="resetPass" theme="primary" size="large" block disabled="{{stepDisabled}}">下一步</t-button>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+<import src="../common/template/icon.axml"></import>
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<button id="{{tId}}" style="{{_._style([style, customStyle])}}" data-custom="{{ customDataset }}" class="class {{className}}" form-type="{{disabled || loading ? '' : type}}" open-type="{{disabled || loading ? '' : openType}}" hover-stop-propagation="{{hoverStopPropagation}}" hover-start-time="{{hoverStartTime}}" hover-stay-time="{{hoverStayTime}}" lang="{{lang}}" session-from="{{sessionFrom}}" hover-class="{{disabled || loading ? '' : (hoverClass || classPrefix + '--hover')}}" send-message-title="{{sendMessageTitle}}" send-message-path="{{sendMessagePath}}" send-message-img="{{sendMessageImg}}" app-parameter="{{appParameter}}" show-message-card="{{showMessageCard}}" aria-label="{{ariaLabel}}" catchTap="handleTap" onGetuserinfo="getuserinfo" onContact="contact" onGetphonenumber="getphonenumber" onError="error" onOpensetting="opensetting" onLaunchapp="launchapp" onChooseavatar="chooseavatar" onAgreeprivacyauthorization="agreeprivacyauthorization">
+  <template is="icon" data="{{class: classPrefix + '__icon', tClass: prefix + '-class-icon', ariaHidden: true, name: iconName, ...iconData}}" a:if="{{iconName || _.isNoEmptyObj(iconData)}}"></template>
+  <t-loading delay="{{loadingProps.delay || 0}}" duration="{{loadingProps.duration || 800}}" indicator="{{loadingProps.indicator || true}}" inheritColor="{{loadingProps.inheritColor || true}}" layout="{{loadingProps.layout || 'horizontal'}}" pause="{{loadingProps.pause || false}}" progress="{{loadingProps.progress || 0}}" reverse="{{loadingProps.reverse || false}}" size="{{loadingProps.size || '40rpx'}}" text="{{loadingProps.text || '' }}" theme="{{loadingProps.theme || 'circular'}}" loading t-class="{{classPrefix}}__loading {{classPrefix}}__loading--wrapper" t-class-indicator="{{classPrefix}}__loading--indicator {{prefix}}-class-loading" a:if="{{loading}}" ref="$morSaveRef" morTagName="t-loading"></t-loading>
+  <view class="{{classPrefix}}__content">
+    <slot name="content"></slot>
+    <block>{{content}}</block>
+    <slot></slot>
+  </view>
+  <slot name="suffix"></slot>
+</button>

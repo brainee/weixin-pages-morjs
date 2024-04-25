@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "个人资料",
+  "usingComponents": {
+    "t-cell-group": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/cell-group/cell-group",
+    "t-cell": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/cell/cell",
+    "t-button": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/button/button",
+    "t-image": "/components/webp-image/index",
+    "t-dialog": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/dialog/dialog",
+    "t-toast": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/toast/toast",
+    "t-select-picker": "../components/ui-select-picker/index"
+  }
+}

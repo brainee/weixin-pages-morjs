@@ -1,0 +1,37 @@
+<!--pages/usercenter/login-account/index.wxml-->
+<view class="loginBox">
+  <f-brand-card loginType="{{accountLogin}}"></f-brand-card>
+
+  <view class="get-mobile-group">
+    <!-- prefixIcon="user-avatar"  -->
+    <t-input bindclear="inputChange" bindchange="inputChange" data-prop="account" value="{{formData.account}}" label="+86" placeholder="请输入手机号" clearable></t-input>
+
+  </view>
+
+  <view class="login-button-area">
+    <button type="button" bindtap="goLine">zy-button</button>
+    <t-button bindtap="goStep2" theme="primary" size="large" block disabled="{{stepDisabled}}">下一步</t-button>
+    <t-button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" theme="light" size="large" block icon="logo-wechat">
+      微信快捷登录
+    </t-button>
+
+    <view class="register-can">
+      没有账号？
+      <t-link size="small" theme="primary" content="立即注册" suffixIcon="jump" hover navigatorProps="{{navigatorProps}}"></t-link>
+    </view>
+  </view>
+
+
+  <view class="user-policy-can">
+    <label class="radio" id="readLable">
+      <radio value="{{isChecked}}" bind:tap="onChangeOfRead" checked="{{isChecked}}"></radio>我已阅读并接受
+    </label>
+    <!--  
+    <t-radio bind:change="onChangeOfRead" block="{{false}}" checked={{isChecked}}>我已阅读并接受</radio>
+    -->
+    <text class="agree-p" bindtap="agreeUser">《服务协议》</text>
+    <text>和</text>
+    <text class="agree-p" bind:tap="agreePrivacy">《隐私政策》</text>
+    
+  </view>
+</view>

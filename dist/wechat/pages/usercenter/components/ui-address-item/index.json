@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-icon": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/icon/icon",
+    "t-tag": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/tag/tag",
+    "t-swipe-cell": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/swipe-cell/swipe-cell"
+  }
+}

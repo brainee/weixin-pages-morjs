@@ -1,0 +1,7 @@
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<view class="class {{prefix}}-class {{classPrefix}} {{active ? prefix + '-is-active': ''}}" style="{{_._style([style, customStyle, (hide ? 'height: 0' : '')])}}" id="{{id}}" aria-role="tabpanel">
+  <view a:if="{{panel}}">{{panel}}</view>
+  <slot></slot>
+  <slot name="panel"></slot>
+</view>

@@ -1,0 +1,2 @@
+<!--index.wxml-->
+<text class="user-motto">{{'hello,test no echart'}}</text>

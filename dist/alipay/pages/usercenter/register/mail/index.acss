@@ -1,0 +1,40 @@
+/* pages/usercenter/validate-code/index.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(180deg, white, lightblue);
+}
+
+.container {
+  padding-top: 70rpx;
+  padding-left: 40rpx;
+  padding-right: 40rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.container .main-title {
+  font-size: 50rpx;
+  color: #2F343E;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 12rpx;
+}
+.container .code-box {
+  margin-top: 63rpx;
+  width: 100%;
+}
+.container .login-button-area {
+  width: 100%;
+  height: 100%;
+  align-self: flex-end;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.container .mb-16 {
+  margin-bottom: 32rpx;
+}

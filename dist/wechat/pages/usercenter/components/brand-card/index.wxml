@@ -1,0 +1,5 @@
+<!--pages/usercenter/components/brand-card/index.wxml-->
+<view class="brand-card" bindtap="onClickBrand">
+    <image class="logo" src="/style/logo2.535638894ed99b17b41d.svg"></image>
+    <text class="logo-title">{{loginType}}</text>
+</view>

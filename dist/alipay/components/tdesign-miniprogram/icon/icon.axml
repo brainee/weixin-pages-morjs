@@ -1,0 +1,8 @@
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<view class="{{ prefix ? prefix : classPrefix}} class {{componentPrefix}}-class" style="{{_._style([iconStyle, style, customStyle])}}" aria-hidden="{{ariaHidden}}" aria-label="{{ariaLabel}}" aria-role="{{ariaRole}}" onTap="onTap">
+  <view class="{{classPrefix}}--image" a:if="{{ isImage }}">
+    <image src="{{ name }}" mode="aspectFit" class="{{classPrefix}}__image" />
+  </view>
+  <label class="{{ prefix ? prefix : classPrefix }}-{{ name }} {{ classPrefix }}-base" a:else> </label>
+</view>

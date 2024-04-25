@@ -1,0 +1,46 @@
+<!--pages/usercenter/validate-code/index.wxml-->
+<view class="container">
+
+  <view class="main-title" onTap="test">
+    输入短信验证码
+  </view>
+
+  <view class="sub-title">
+    请输入发送至<text class="phone">+86 {{account}}</text>的 6 位验证码，有效期 5 分钟
+  </view>
+
+  <block a:if="{{leftSendTimes>0}}">
+
+    <view class="code-box" onTap="getFocus">
+
+      <view class="{{code.length==0?'active':'input-box'}}">{{code[0]}}</view>
+
+      <view class="{{code.length==1?'active':'input-box'}}">{{code[1]}}</view>
+
+      <view class="{{code.length==2?'active':'input-box'}}">{{code[2]}}</view>
+
+      <view class="{{code.length==3?'active':'input-box'}}">{{code[3]}}</view>
+
+      <view class="{{code.length==4?'active':'input-box'}}">{{code[4]}}</view>
+
+      <view class="{{code.length==5?'active':'input-box'}}">{{code[5]}}</view>
+
+    </view>
+
+    <input class="input-number" type="number" focus="{{isFocus}}" maxlength="6" onInput="getCode" />
+  </block>
+  <view class="time-box">
+    <view class="regain" hover-class="btn-hover" a:if="{{isRegain&&leftSendTimes>0}}" onTap="regain">重新获取验证码</view>
+    <view class="over-times" a:elif="{{leftSendTimes<=0}}">已无可重试次数，请稍后再试</view>
+    <view class="regain-info" a:else>
+      <text class="time">{{time}}</text>秒后可重新获取验证码
+    </view>
+
+    <view class="switch-type" hover-class="btn-hover" a:if="{{operate=='login'}}" onTap="switchPass">切换到密码验证</view>
+  </view>
+
+  <view class="login-button-area" a:if="{{operate=='reset'||operate=='register'}}">
+    <t-button theme="primary" size="large" block disabled="{{stepDisabled}}" onTap="goNext" ref="$morSaveRef" morTagName="t-button">下一步</t-button>
+  </view>
+
+</view>

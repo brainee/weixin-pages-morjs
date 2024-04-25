@@ -1,0 +1,29 @@
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<view style="{{_._style([style, customStyle])}}" class="{{_.cls(classPrefix, [_placement, ['block', block]])}} class {{prefix}}-class" disabled="{{disabled}}" aria-role="radio" aria-checked="{{checked}}" aria-label="{{label + content}}" aria-disabled="{{disabled}}" onTaex="{{tabindex}}" onMut:tap="handleTap">
+  <view class="{{_.cls(classPrefix + '__icon', [_placement, ['checked', checked], ['disabled', disabled]])}} {{prefix}}-class-icon">
+    <slot name="icon" a:if="{{slotIcon}}"></slot>
+    <view class="{{classPrefix}}__image" a:elif="{{customIcon}}">
+      <image src="{{checked ? iconVal[0] : iconVal[1]}}" class="{{classPrefix}}-icon__image" webp />
+    </view>
+    <block a:else>
+      <t-icon name="{{icon == 'circle' ? 'check-circle-filled' : 'check'}}" class="{{classPrefix}}__icon-wrap" a:if="{{checked && (icon == 'circle' || icon == 'line')}}" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+      <view class="{{_.cls(classPrefix + '__icon-' + icon, [['disabled', disabled]])}}" a:if="{{checked && icon == 'dot'}}"></view>
+      <view class="{{_.cls(classPrefix + '__icon-circle', [['disabled', disabled]])}}" a:if="{{!checked && (icon == 'circle' || icon == 'dot')}}"></view>
+      <!-- line && unchecked 为空 需要展位元素 -->
+      <view class="placeholder" a:if="{{!checked && icon == 'line'}}"></view>
+    </block>
+  </view>
+
+  <view class="{{classPrefix}}__content" data-target="text" onMut:tap="handleTap">
+    <view class="{{_.cls(classPrefix + '__title', [['disabled', disabled], ['checked', checked]])}} {{prefix}}-class-label" style="-webkit-line-clamp:{{maxLabelRow}}">
+      {{label}}
+      <slot></slot>
+      <slot name="label"></slot>
+    </view>
+
+    <view class="{{_.cls(classPrefix + '__description', [['disabled', disabled], ['checked', checked]])}} {{prefix}}-class-content " style="-webkit-line-clamp:{{maxContentRow}}">{{content}}<slot name="content"></slot></view>
+  </view>
+
+  <view class="{{_.cls(classPrefix + '__border', [_placement])}} {{prefix}}-class-border" a:if="{{!borderless}}"></view>
+</view>

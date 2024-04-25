@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "t-input": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/input/input",
+    "t-button": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/button/button",
+    "t-radio": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/radio/radio",
+    "f-brand-card": "../components/brand-card/index"
+  }
+}

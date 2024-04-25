@@ -1,0 +1,41 @@
+<import-sjs name="_" from="../common/utils.sjs"></import-sjs>
+
+<t-popup class="class" visible="{{visible}}" placement="bottom" onVisibleChange="onVisibleChange" ref="$morSaveRef" morTagName="t-popup">
+  <view style="{{_._style([style, customStyle])}}" class="{{name}}">
+    <view class="{{name}}__title">
+      <slot name="title"></slot>
+      {{title}}
+    </view>
+    <view class="{{name}}__close-btn" onTap="onClose">
+      <slot name="close-btn"></slot>
+      <t-icon size="24" name="close" a:if="{{closeBtn}}" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+    </view>
+    <view class="{{name}}__content">
+      <block a:if="{{steps && steps.length}}">
+        <view class="{{name}}__steps" a:if="{{theme == 'step'}}">
+          <view class="{{name}}__step" data-index="{{index}}" a:for="{{steps}}" a:key="index" onTap="onStepClick">
+            <view class="{{name}}__step-dot {{name}}__step-dot--{{item !== placeholder ? 'active' : ''}} {{name}}__step-dot--{{index === steps.length - 1 ? 'last' : ''}}"></view>
+            <view class="{{name}}__step-label {{name}}__step-label--{{index === stepIndex ? 'active' : ''}}">
+              {{ item }}
+            </view>
+            <t-icon name="chevron-right" size="22" t-class="{{name}}__step-arrow" ref="$morSaveRef" morTagName="t-icon"></t-icon>
+          </view>
+        </view>
+        <block a:if="{{theme == 'tab'}}">
+          <t-tabs id="tabs" value="{{stepIndex}}" space-evenly="{{false}}" onChange="onTabChange" ref="$morSaveRef" morTagId="tabs" morTagName="t-tabs">
+            <t-tab-panel value="{{index}}" label="{{item}}" a:for="{{steps}}" a:key="index" ref="$morSaveRef" morTagName="t-tab-panel"></t-tab-panel>
+          </t-tabs>
+        </block>
+      </block>
+      <view class="{{name}}__options-title" a:if="{{ subTitles && subTitles[stepIndex] }}">{{subTitles[stepIndex]}}</view>
+      <view class="{{name}}__options-container" style="width: {{items.length + 1}}00vw; transform: translateX(-{{stepIndex}}00vw)">
+        <scroll-view class="{{name}}__options" scroll-y scroll-top="{{scrollTopList[index]}}" a:for="{{items}}" a:for-item="options" a:key="index">
+          <view class="cascader-radio-group-{{index}}">
+            <t-radio-group value="{{selectedValue[index]}}" keys="{{keys}}" options="{{options}}" data-level="{{index}}" placement="right" icon="line" borderless onChange="handleSelect" ref="$morSaveRef" morTagName="t-radio-group">
+            </t-radio-group>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</t-popup>
