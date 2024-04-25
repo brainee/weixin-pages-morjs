@@ -29,6 +29,7 @@
     "t-link": "tdesign-miniprogram/link/link",
     "t-fab": "tdesign-miniprogram/fab/fab",
     "t-cascader": "tdesign-miniprogram/cascader/cascader",
+    "t-search": "tdesign-miniprogram/search/search",
     "t-toast": "tdesign-miniprogram/toast/toast"
   },
   "resolveAlias":{

@@ -21,8 +21,10 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+  <view>
+   <t-search model:value="{{motto}}" placeholder="搜索预设文案" />
+  </view>
   <view class="usermotto">
-    <t-icon slot="left-icon" prefix="wr" name="search" size="40rpx" color="#bbb" />
     <text class="user-motto">{{motto}}</text>
   </view>
   <t-fab icon="add" bind:click="bindViewTap" aria-label="增加"></t-fab>
