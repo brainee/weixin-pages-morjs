@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/home/home",
     "pages/usercenter/login/account/index",
     "pages/line/index",
+    "pages/bar/index",
     "pages/usercenter/code/index",
     "pages/usercenter/login/pass/index",
     "pages/usercenter/reset/account/index",
@@ -36,6 +38,31 @@
     "components/*": "components/*",
     "tdesign-miniprogram/*": "miniprogram_npm/tdesign-miniprogram/*"
   },
+  "tabBar": {
+		"custom": true,
+		"color": "#666666",
+		"selectedColor": "#FF5F15",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页"
+			},
+			{
+				"pagePath": "pages/index/index",
+				"text": "分类"
+			},
+			{
+				"pagePath": "pages/line/index",
+				"text": "购物车"
+			},
+			{
+				"pagePath": "pages/usercenter/login/account/index",
+				"text": "我的"
+			}
+		]
+	},
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

@@ -1,6 +1,6 @@
 import { wxSession,accountSession,phoneSession,} from '../../model/usercenter/sessionModel';
 import {restartMiniProgram} from "../../utils/restartMiniProgram"
-import {config} from 'config/index'
+import {config} from '../../config/index'
 
 export function getWxSession(params){
   let prefix="[zy]getWxSession"
@@ -39,7 +39,7 @@ export function wxLogin(){
             })
             .then(e=>{
               // restartMiniProgram({
-              //   path:"/pages/home/home",
+              //   path:"/pages/index/index",
               // })
               // .then(e=>{console.log(prefix,"success",e)})
               // .catch(e=>{console.log(prefix,"fail",e)})
@@ -60,7 +60,7 @@ export function wxLogin(){
         })
         .then(e=>{
           restartMiniProgram({
-            path:"/pages/home/home",
+            path:"/pages/index/index",
           })
           .then(e=>{console.log(prefix,"success",e)})
           .catch(e=>{console.log(prefix,"fail",e)})
@@ -76,7 +76,7 @@ export function wxLogin(){
     })
     .then(e=>{
       restartMiniProgram({
-        path:"/pages/home/home",
+        path:"/pages/index/index",
       })
       .then(e=>{console.log(prefix,"success",e)})
       .catch(e=>{console.log(prefix,"fail",e)})

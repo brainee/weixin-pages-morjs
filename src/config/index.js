@@ -5,9 +5,9 @@ export const config = {
   default_mobile_prefix:"86",
   default_sendsms_time:6,
   domainList:{
-    develop:"https://service-flightai.fat.testqa.com",
-    trial:"https://service-flightai.fat.testqa.com",
-    release:"https://service-flightai.fat.testqa.com",
+    develop:"https://service-flightai.fat.ctripqa.com",
+    trial:"https://service-flightai.fat.ctripqa.com",
+    release:"https://service-flightai.fat.ctripqa.com",
   }
 };
 

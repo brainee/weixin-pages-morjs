@@ -82,7 +82,9 @@ Page({
       onInit: initChart
     }
   },
-
+  onShow() {
+    this?.getTabBar()?.init();
+  },
   onReady() {
   }
 });
