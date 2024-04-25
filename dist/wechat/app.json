@@ -33,6 +33,7 @@
     "t-swiper": "./npm_components/tdesign-miniprogram/miniprogram_dist/swiper/swiper",
     "t-swiper-nav": "./npm_components/tdesign-miniprogram/miniprogram_dist/swiper-nav/swiper-nav",
     "t-toast": "./npm_components/tdesign-miniprogram/miniprogram_dist/toast/toast",
+    "t-image": "./components/webp-image/index",
     "t-tabs": "./npm_components/tdesign-miniprogram/miniprogram_dist/tabs/tabs",
     "t-tab-panel": "./npm_components/tdesign-miniprogram/miniprogram_dist/tab-panel/tab-panel"
   },
