@@ -59,11 +59,11 @@ export function wxLogin(){
           showCancel:false
         })
         .then(e=>{
-          restartMiniProgram({
-            path:"/pages/index/index",
-          })
-          .then(e=>{console.log(prefix,"success",e)})
-          .catch(e=>{console.log(prefix,"fail",e)})
+          // restartMiniProgram({
+          //   path:"/pages/index/index",
+          // })
+          // .then(e=>{console.log(prefix,"success",e)})
+          // .catch(e=>{console.log(prefix,"fail",e)})
         });
       }
     });
