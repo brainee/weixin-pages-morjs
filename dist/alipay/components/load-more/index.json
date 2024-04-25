@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "t-loading": "../../npm_components/tdesign-miniprogram/miniprogram_dist/loading/loading",
+    "t-divider": "../../npm_components/tdesign-miniprogram/miniprogram_dist/divider/divider"
+  }
+}

@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "t-popup": "../../../../npm_components/tdesign-miniprogram/miniprogram_dist/popup/popup"
-  }
-}

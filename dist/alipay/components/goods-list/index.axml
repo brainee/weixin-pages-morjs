@@ -1,0 +1,6 @@
+<view class="goods-list-wrap wr-class" id="{{independentID}}">
+	<block a:for="{{goodsList}}" a:for-item="item" a:key="index">
+		<goods-card id="{{independentID}}-gd-{{index}}" data="{{item}}" currency="{{item.currency || '¥'}}" thresholds="{{thresholds}}" class="goods-card-inside" data-index="{{index}}" onThumb="onClickGoodsThumb" onClick="onClickGoods" onAddCart="onAddCart" ref="$morSaveRef" morTagId="{{independentID}}-gd-{{index}}" morTagName="goods-card"></goods-card>
+	</block>
+</view>
+

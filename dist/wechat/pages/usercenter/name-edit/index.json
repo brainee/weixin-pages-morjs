@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "昵称",
-  "usingComponents": {
-    "t-input": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/input/input",
-    "t-icon": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/icon/icon",
-    "t-button": "../../../npm_components/tdesign-miniprogram/miniprogram_dist/button/button"
-  }
-}

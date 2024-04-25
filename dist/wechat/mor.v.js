@@ -3274,55 +3274,6 @@ exports.markAsUnsupport = markAsUnsupport;
 
 /***/ }),
 
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/avatar/props.js":
-/*!****************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/avatar/props.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    alt: {
-        type: String,
-        value: '',
-    },
-    badgeProps: {
-        type: Object,
-    },
-    bordered: {
-        type: Boolean,
-        value: false,
-    },
-    externalClasses: {
-        type: Array,
-    },
-    hideOnLoadFailed: {
-        type: Boolean,
-        value: false,
-    },
-    icon: {
-        type: null,
-    },
-    image: {
-        type: String,
-        value: '',
-    },
-    imageProps: {
-        type: Object,
-    },
-    shape: {
-        type: String,
-        value: 'circle',
-    },
-    size: {
-        type: String,
-        value: 'medium',
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
 /***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/badge/props.js":
 /*!***************************************************************************!*\
   !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/badge/props.js ***!
@@ -3620,126 +3571,6 @@ const props = {
     url: {
         type: String,
         value: '',
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/checkbox-group/props.js":
-/*!************************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/checkbox-group/props.js ***!
-  \************************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    borderless: {
-        type: Boolean,
-        value: false,
-    },
-    disabled: {
-        type: Boolean,
-    },
-    max: {
-        type: Number,
-        value: undefined,
-    },
-    name: {
-        type: String,
-        value: '',
-    },
-    options: {
-        type: Array,
-        value: [],
-    },
-    value: {
-        type: Array,
-        value: null,
-    },
-    defaultValue: {
-        type: Array,
-        value: [],
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/checkbox/props.js":
-/*!******************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/checkbox/props.js ***!
-  \******************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    block: {
-        type: Boolean,
-        value: true,
-    },
-    borderless: {
-        type: Boolean,
-        value: false,
-    },
-    checkAll: {
-        type: Boolean,
-        value: false,
-    },
-    checked: {
-        type: Boolean,
-        value: null,
-    },
-    defaultChecked: {
-        type: Boolean,
-        value: false,
-    },
-    content: {
-        type: String,
-    },
-    contentDisabled: {
-        type: Boolean,
-    },
-    disabled: {
-        type: null,
-        value: undefined,
-    },
-    externalClasses: {
-        type: Array,
-    },
-    icon: {
-        type: null,
-        value: 'circle',
-    },
-    indeterminate: {
-        type: Boolean,
-        value: false,
-    },
-    label: {
-        type: String,
-    },
-    maxContentRow: {
-        type: Number,
-        value: 5,
-    },
-    maxLabelRow: {
-        type: Number,
-        value: 3,
-    },
-    name: {
-        type: String,
-        value: '',
-    },
-    placement: {
-        type: String,
-        value: 'left',
-    },
-    readonly: {
-        type: Boolean,
-        value: false,
-    },
-    value: {
-        type: null,
     },
 };
 /* harmony default export */ __webpack_exports__["default"] = (props);
@@ -4093,20 +3924,16 @@ class SuperComponent {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "addUnit": function() { return /* binding */ addUnit; },
 /* harmony export */   "calcIcon": function() { return /* binding */ calcIcon; },
-/* harmony export */   "classNames": function() { return /* binding */ classNames; },
 /* harmony export */   "getCharacterLength": function() { return /* binding */ getCharacterLength; },
 /* harmony export */   "getCurrentPage": function() { return /* binding */ getCurrentPage; },
 /* harmony export */   "getInstance": function() { return /* binding */ getInstance; },
 /* harmony export */   "getRect": function() { return /* binding */ getRect; },
 /* harmony export */   "isDef": function() { return /* binding */ isDef; },
-/* harmony export */   "isNumber": function() { return /* binding */ isNumber; },
-/* harmony export */   "isObject": function() { return /* binding */ isObject; },
 /* harmony export */   "setIcon": function() { return /* binding */ setIcon; },
 /* harmony export */   "styles": function() { return /* binding */ styles; },
-/* harmony export */   "toCamel": function() { return /* binding */ toCamel; },
 /* harmony export */   "uniqueFactory": function() { return /* binding */ uniqueFactory; }
 /* harmony export */ });
-/* unused harmony exports debounce, throttle, getAnimationFrame, isNull, isUndefined, chunk, unitConvert, isBool, isString, isOverSize */
+/* unused harmony exports debounce, throttle, classNames, getAnimationFrame, isNumber, isNull, isUndefined, chunk, unitConvert, isBool, isObject, isString, toCamel, isOverSize */
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ "../node_modules/tdesign-miniprogram/miniprogram_dist/common/config.js");
 
 const systemInfo = wx.getSystemInfoSync();
@@ -4404,195 +4231,34 @@ function canUseVirtualHost() {
 
 /***/ }),
 
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/common/wechat.js":
+/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/divider/props.js":
 /*!*****************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/common/wechat.js ***!
+  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/divider/props.js ***!
   \*****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getObserver": function() { return /* binding */ getObserver; }
-/* harmony export */ });
-const getObserver = (context, selector) => {
-    return new Promise((resolve, reject) => {
-        wx.createIntersectionObserver(context)
-            .relativeToViewport()
-            .observe(selector, (res) => {
-            resolve(res);
-        });
-    });
-};
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/dialog/props.js":
-/*!****************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/dialog/props.js ***!
-  \****************************************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__) {
 
 const props = {
-    actions: {
-        type: Array,
-    },
-    buttonLayout: {
+    align: {
         type: String,
-        value: 'horizontal',
-    },
-    cancelBtn: {
-        type: null,
-    },
-    closeBtn: {
-        type: null,
-        value: false,
-    },
-    closeOnOverlayClick: {
-        type: Boolean,
-        value: undefined,
-    },
-    confirmBtn: {
-        type: null,
+        value: 'center',
     },
     content: {
         type: String,
     },
-    externalClasses: {
-        type: Array,
-    },
-    overlayProps: {
-        type: Object,
-        value: {},
-    },
-    preventScrollThrough: {
-        type: Boolean,
-        value: true,
-    },
-    showOverlay: {
-        type: Boolean,
-        value: true,
-    },
-    title: {
-        type: String,
-    },
-    visible: {
-        type: Boolean,
-    },
-    zIndex: {
-        type: Number,
-        value: 11500,
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/dropdown-item/props.js":
-/*!***********************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/dropdown-item/props.js ***!
-  \***********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    disabled: {
-        type: Boolean,
-        value: false,
-    },
-    externalClasses: {
-        type: Array,
-    },
-    keys: {
-        type: Object,
-    },
-    label: {
+    style: {
         type: String,
         value: '',
     },
-    multiple: {
+    dashed: {
         type: Boolean,
         value: false,
     },
-    options: {
-        type: Array,
-        value: [],
-    },
-    optionsColumns: {
-        type: null,
-        value: 1,
-    },
-    optionsLayout: {
-        type: String,
-        value: 'columns',
-    },
-    value: {
-        type: null,
-        value: undefined,
-    },
-    defaultValue: {
-        type: null,
-        value: undefined,
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/dropdown-menu/props.js":
-/*!***********************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/dropdown-menu/props.js ***!
-  \***********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    arrowIcon: {
-        type: null,
-        value: 'caret-down-small',
-    },
-    closeOnClickOverlay: {
-        type: Boolean,
-        value: true,
-    },
-    duration: {
-        type: null,
-        value: 200,
-    },
     externalClasses: {
         type: Array,
     },
-    showOverlay: {
-        type: Boolean,
-        value: true,
-    },
-    zIndex: {
-        type: Number,
-        value: 11600,
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/empty/props.js":
-/*!***************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/empty/props.js ***!
-  \***************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    description: {
+    layout: {
         type: String,
-    },
-    externalClasses: {
-        type: Array,
-    },
-    icon: {
-        type: null,
-    },
-    image: {
-        type: String,
+        value: 'horizontal',
     },
 };
 /* harmony default export */ __webpack_exports__["default"] = (props);
@@ -5246,77 +4912,6 @@ function transition() {
 
 /***/ }),
 
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/picker-item/props.js":
-/*!*********************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/picker-item/props.js ***!
-  \*********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    format: {
-        type: null,
-    },
-    options: {
-        type: Array,
-        value: [],
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/picker/props.js":
-/*!****************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/picker/props.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    autoClose: {
-        type: Boolean,
-        value: true,
-    },
-    cancelBtn: {
-        type: null,
-        value: true,
-    },
-    confirmBtn: {
-        type: null,
-        value: true,
-    },
-    header: {
-        type: Boolean,
-        value: true,
-    },
-    keys: {
-        type: Object,
-    },
-    title: {
-        type: String,
-        value: '',
-    },
-    value: {
-        type: Array,
-        value: null,
-    },
-    defaultValue: {
-        type: Array,
-    },
-    visible: {
-        type: Boolean,
-        value: false,
-    },
-    popupProps: {
-        type: Object,
-        value: {},
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
 /***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/popup/props.js":
 /*!***************************************************************************!*\
   !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/popup/props.js ***!
@@ -5643,33 +5238,6 @@ const props = {
 
 /***/ }),
 
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/swipe-cell/props.js":
-/*!********************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/swipe-cell/props.js ***!
-  \********************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    disabled: {
-        type: Boolean,
-    },
-    left: {
-        type: Array,
-    },
-    opened: {
-        type: Boolean,
-        optionalTypes: [Array],
-        value: false,
-    },
-    right: {
-        type: Array,
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
 /***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/swiper/props.js":
 /*!****************************************************************************!*\
   !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/swiper/props.js ***!
@@ -5738,51 +5306,6 @@ const props = {
     snapToEdge: {
         type: Boolean,
         value: false,
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/switch/props.js":
-/*!****************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/switch/props.js ***!
-  \****************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    customValue: {
-        type: Array,
-        value: [true, false],
-    },
-    disabled: {
-        type: Boolean,
-        value: false,
-    },
-    icon: {
-        type: Array,
-        value: [],
-    },
-    label: {
-        type: Array,
-        value: [],
-    },
-    loading: {
-        type: Boolean,
-        value: false,
-    },
-    size: {
-        type: String,
-        value: 'medium',
-    },
-    value: {
-        type: null,
-        value: null,
-    },
-    defaultValue: {
-        type: null,
-        value: null,
     },
 };
 /* harmony default export */ __webpack_exports__["default"] = (props);
@@ -5947,162 +5470,6 @@ const props = {
     },
     defaultValue: {
         type: null,
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/tag/props.js":
-/*!*************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/tag/props.js ***!
-  \*************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    closable: {
-        type: null,
-        value: false,
-    },
-    disabled: {
-        type: Boolean,
-        value: false,
-    },
-    externalClasses: {
-        type: Array,
-    },
-    icon: {
-        type: null,
-    },
-    maxWidth: {
-        type: null,
-    },
-    shape: {
-        type: String,
-        value: 'square',
-    },
-    size: {
-        type: String,
-        value: 'medium',
-    },
-    theme: {
-        type: String,
-        value: 'default',
-    },
-    variant: {
-        type: String,
-        value: 'dark',
-    },
-};
-/* harmony default export */ __webpack_exports__["default"] = (props);
-
-
-/***/ }),
-
-/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/textarea/props.js":
-/*!******************************************************************************!*\
-  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/textarea/props.js ***!
-  \******************************************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__) {
-
-const props = {
-    adjustPosition: {
-        type: Boolean,
-        value: true,
-    },
-    autofocus: {
-        type: Boolean,
-        value: false,
-    },
-    autosize: {
-        type: null,
-        value: false,
-    },
-    confirmHold: {
-        type: Boolean,
-        value: false,
-    },
-    confirmType: {
-        type: String,
-        value: 'return',
-    },
-    cursorSpacing: {
-        type: Number,
-        value: 0,
-    },
-    disabled: {
-        type: Boolean,
-        value: false,
-    },
-    externalClasses: {
-        type: Array,
-    },
-    focus: {
-        type: Boolean,
-        value: false,
-    },
-    label: {
-        type: String,
-    },
-    fixed: {
-        type: Boolean,
-        value: false,
-    },
-    maxcharacter: {
-        type: Number,
-    },
-    maxlength: {
-        type: Number,
-        value: -1,
-    },
-    placeholder: {
-        type: String,
-        value: undefined,
-    },
-    placeholderStyle: {
-        type: String,
-        value: '',
-    },
-    value: {
-        type: String,
-        value: null,
-    },
-    defaultValue: {
-        type: String,
-        value: '',
-    },
-    bordered: {
-        type: Boolean,
-        value: false,
-    },
-    indicator: {
-        type: Boolean,
-        value: false,
-    },
-    cursor: {
-        type: Number,
-        value: -1,
-    },
-    showConfirmBar: {
-        type: Boolean,
-        value: true,
-    },
-    selectionStart: {
-        type: Number,
-        value: -1,
-    },
-    selectionEnd: {
-        type: Number,
-        value: -1,
-    },
-    disableDefaultPadding: {
-        type: Boolean,
-        value: false,
-    },
-    holdKeyboard: {
-        type: Boolean,
-        value: false,
     },
 };
 /* harmony default export */ __webpack_exports__["default"] = (props);

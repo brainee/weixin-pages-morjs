@@ -30,7 +30,11 @@
     "t-fab": "tdesign-miniprogram/fab/fab",
     "t-cascader": "tdesign-miniprogram/cascader/cascader",
     "t-search": "tdesign-miniprogram/search/search",
-    "t-toast": "tdesign-miniprogram/toast/toast"
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "t-swiper-nav": "tdesign-miniprogram/swiper-nav/swiper-nav",
+    "t-toast": "tdesign-miniprogram/toast/toast",
+    "t-tabs": "tdesign-miniprogram/tabs/tabs",
+    "t-tab-panel": "tdesign-miniprogram/tab-panel/tab-panel"
   },
   "resolveAlias":{
     "config/*": "config/*",

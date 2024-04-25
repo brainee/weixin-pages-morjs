@@ -1333,6 +1333,43 @@ function canUseVirtualHost() {
 
 /***/ }),
 
+/***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/divider/props.js":
+/*!*****************************************************************************!*\
+  !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/divider/props.js ***!
+  \*****************************************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__) {
+
+"use strict";
+
+const props = {
+  align: {
+    type: String,
+    value: "center"
+  },
+  content: {
+    type: String
+  },
+  style: {
+    type: String,
+    value: ""
+  },
+  dashed: {
+    type: Boolean,
+    value: false
+  },
+  externalClasses: {
+    type: Array
+  },
+  layout: {
+    type: String,
+    value: "horizontal"
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = (props);
+
+
+/***/ }),
+
 /***/ "../node_modules/tdesign-miniprogram/miniprogram_dist/fab/draggable/props.js":
 /*!***********************************************************************************!*\
   !*** ../node_modules/tdesign-miniprogram/miniprogram_dist/fab/draggable/props.js ***!

@@ -1,0 +1,10 @@
+<import-sjs name="utils" from="./inline-import-sjs-1.sjs"></import-sjs>
+<view class="price {{type}} wr-class">
+	<view class="line" style="height:{{utils.addUnit(lineThroughWidth)}};" a:if="{{type === 'delthrough'}}"></view>
+	<view class="symbol symbol-class">{{symbol}}</view>
+	<view class="pprice">
+		<view class="integer inline">{{pArr[0]}}</view>
+		<view class="decimal inline {{decimalSmaller ? 'smaller' : ''}} decimal-class" a:if="{{pArr[1]}}">.{{pArr[1]}}</view>
+	</view>
+</view>
+

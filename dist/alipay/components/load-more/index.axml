@@ -1,0 +1,19 @@
+<view class="load-more wr-class" style="{{listIsEmpty && (status === 0 || status === 2) ? 'display: none' : '' }}" onTap="tapHandle">
+  <!-- 加载中 -->
+
+  <t-loading t-class="t-class-loading" t-class-text="t-class-loading-text" t-class-indicator="t-class-indicator" loading="{{status === 1}}" text="加载中..." theme="circular" size="40rpx" ref="$morSaveRef" morTagName="t-loading"></t-loading>
+
+  <!-- 已全部加载 -->
+  <t-divider t-class="t-class-divider" t-class-content="t-class-divider-content" a:if="{{status === 2}}" ref="$morSaveRef" morTagName="t-divider">
+    <text slot="content">{{noMoreText}}</text>
+  </t-divider>
+
+  <!-- 加载失败 -->
+  <view class="load-more__error" a:if="{{status===3}}">
+    加载失败
+    <text class="load-more__refresh-btn" onTap="tapHandle">刷新</text>
+  </view>
+</view>
+
+<!-- 支持通过slot传入页面/列表的空态，load-more来控制空态的显示状态 -->
+<slot name="empty" a:if="{{listIsEmpty && (status === 0 || status === 2)}}"></slot>

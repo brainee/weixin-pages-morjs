@@ -44,18 +44,16 @@
     "disableUseStrict": false,
     "minifyWXML": true,
     "showES6CompileOption": false,
-    "useCompilerPlugins": [],
-    "condition": true
+    "useCompilerPlugins": []
   },
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {
-    "wxext14566970e7e9f62": "3.2.5-6"
+    "wxext14566970e7e9f62": "2.27.3"
   },
   "appid": "wx5a194a890ecc89ba",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  },
-  "projectArchitecture": "multiPlatform"
+  }
 }

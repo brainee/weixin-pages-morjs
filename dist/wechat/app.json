@@ -30,7 +30,11 @@
     "t-fab": "./npm_components/tdesign-miniprogram/miniprogram_dist/fab/fab",
     "t-cascader": "./npm_components/tdesign-miniprogram/miniprogram_dist/cascader/cascader",
     "t-search": "./npm_components/tdesign-miniprogram/miniprogram_dist/search/search",
-    "t-toast": "./npm_components/tdesign-miniprogram/miniprogram_dist/toast/toast"
+    "t-swiper": "./npm_components/tdesign-miniprogram/miniprogram_dist/swiper/swiper",
+    "t-swiper-nav": "./npm_components/tdesign-miniprogram/miniprogram_dist/swiper-nav/swiper-nav",
+    "t-toast": "./npm_components/tdesign-miniprogram/miniprogram_dist/toast/toast",
+    "t-tabs": "./npm_components/tdesign-miniprogram/miniprogram_dist/tabs/tabs",
+    "t-tab-panel": "./npm_components/tdesign-miniprogram/miniprogram_dist/tab-panel/tab-panel"
   },
   "resolveAlias": {
     "config/*": "config/*",
