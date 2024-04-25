@@ -34,7 +34,7 @@ Page({
         }
     },
     onShow: function () {
-        // this?.getTabBar()?.init();
+        // this?.getTabBar?.()?.init();
     },
     getUserProfile: function () {
         var _this = this;

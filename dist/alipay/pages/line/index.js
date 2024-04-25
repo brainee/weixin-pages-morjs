@@ -91,8 +91,8 @@ __MOR_PAGE__({
         }
     },
     onShow() {
-        var _a;
-        (_a = this === null || this === void 0 ? void 0 : this.getTabBar()) === null || _a === void 0 ? void 0 : _a.init();
+        var _a, _b;
+        (_b = (_a = this === null || this === void 0 ? void 0 : this.getTabBar) === null || _a === void 0 ? void 0 : _a.call(this)) === null || _b === void 0 ? void 0 : _b.init();
     },
     onReady() {
     }

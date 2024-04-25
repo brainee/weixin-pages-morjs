@@ -58,7 +58,7 @@ Page({
     // wxLogin();
   },
   onShow() {
-    this?.getTabBar()?.init();
+    this?.getTabBar?.()?.init();
   },
   getPhoneNumber(e) {
     let prefix="[zy]getPhoneNumber";
