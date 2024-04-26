@@ -5,6 +5,6 @@
   <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
 </view>
 <!-- #endif -->
-<!-- #ifndef wechat -->
+<!-- #ifdef tt -->
 <text class="user-motto">{{'hello,test no echart'}}</text>
 <!-- #endif -->

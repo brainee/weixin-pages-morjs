@@ -9,6 +9,10 @@
   "libVersion": "2.15.0",
   "projectname": "miniprogram-wechat-ts-less",
   "setting": {
+    "useCompilerPlugins": [
+      "typescript",
+      "sass"
+    ],
     "urlCheck": true,
     "es6": true,
     "enhance": true,
@@ -43,8 +47,7 @@
     "minifyWXSS": true,
     "disableUseStrict": false,
     "minifyWXML": true,
-    "showES6CompileOption": false,
-    "useCompilerPlugins": []
+    "showES6CompileOption": false
   },
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
